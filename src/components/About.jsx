@@ -1,9 +1,9 @@
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { services } from "../constants";
+import {me} from '../assets/index'
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -42,6 +42,7 @@ const About = () => {
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
+<div className="flex">
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
@@ -49,7 +50,9 @@ const About = () => {
       >
         Embarking on my journey into the realm of programming, I've cultivated a diverse skill set that reflects my passion for technology and innovation. Proficient in Java and Python, I've honed my programming prowess to tackle a variety of challenges. My exploration into the intricacies of deep learning and neural networks has allowed me to delve into the fascinating world of artificial intelligence, where I've gained hands-on experience in creating intelligent systems. Additionally, my expertise extends to the realm of Python performance optimization, where I've fine-tuned code for efficiency and speed. This journey represents my commitment to continuous learning and my dedication to mastering cutting-edge technologies. I am excited to contribute my skills to the ever-evolving landscape of technology.
       </motion.p>
-
+      <img src={me} alt="my image" className="w-[200px] h-auto ml-10 mt-8 rounded-full"/>
+  
+      </div>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
